@@ -1,0 +1,18 @@
+name: Add Theme
+description: add your theme to repo
+title: "[Theme]: <name>"
+labels: ["theme"]
+assignees:
+  - flick0
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to write this theme request!
+  - type: input
+    id: repo
+    attributes:
+      label: git repository which includes your theme
+      placeholder: repo url
+    validations:
+      required: true
