@@ -1,0 +1,55 @@
+name: approve theme
+
+on:
+ issues:
+  types:
+   - labeled
+
+jobs:
+  approve:
+    if: github.event.label.name == 'approved'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
+          submodules: true
+      - name: add submodule
+        run: |
+          git submodule add "$(tail -n +3 <<< $"${{ github.event.issue.body }}")"
+      - name: commit
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions - update submodules"
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          comment: |
+            theme request approved
+          labels: |
+            approved
+            theme
+  deny:
+    if: github.event.label.name == 'denied'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: |
+            theme request denied
+          labels: |
+            denied
+            theme
+      
+        
+    
