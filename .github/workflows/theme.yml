@@ -8,7 +8,7 @@ on:
 jobs:
   approve:
     if: github.event.label.name == 'approved'
-    permissions: write-all
+    permissions: read-all|write-all
     runs-on: ubuntu-latest
     defaults:
       run:
