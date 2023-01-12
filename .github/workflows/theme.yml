@@ -37,7 +37,7 @@ jobs:
             theme
   send_pr:
     if: github.event.label.name == 'approved'
-    permissions: write-all
+    permissions: write-read-all
     runs-on: ubuntu-latest
     defaults:
       run:
