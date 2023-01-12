@@ -35,6 +35,24 @@ jobs:
           labels: |
             approved
             theme
+  send_pr:
+    if: github.event.label.name == 'approved'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: pull_repo
+        run: |
+          cd ..
+          ls -a
+          repo="$(tail -n +3 <<< $"${{ github.event.issue.body }}")"
+          name="$(echo $repo | grep -o '[^/]*$')"
+          git clone $repo
+          cd "${name/.git/}"
+          ls -a
+
   deny:
     if: github.event.label.name == 'denied'
     permissions: write-all
