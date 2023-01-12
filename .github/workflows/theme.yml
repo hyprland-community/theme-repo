@@ -5,10 +5,11 @@ on:
   types:
    - labeled
 
+permissions: read-all|write-all
+
 jobs:
   approve:
     if: github.event.label.name == 'approved'
-    permissions: write-all
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -37,7 +38,6 @@ jobs:
             theme
   send_pr:
     if: github.event.label.name == 'approved'
-    permissions: read-all|write-all
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -67,7 +67,6 @@ jobs:
 
   deny:
     if: github.event.label.name == 'denied'
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Close Issue
