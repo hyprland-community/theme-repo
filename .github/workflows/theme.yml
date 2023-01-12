@@ -5,8 +5,6 @@ on:
   types:
    - labeled
 
-permissions: read-all|write-all
-
 jobs:
   approve:
     if: github.event.label.name == 'approved'
