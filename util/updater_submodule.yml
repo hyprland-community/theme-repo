@@ -7,13 +7,13 @@ on:
 
 jobs:
   update:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
         with: 
-          repository: org/parent_repository
-          token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
+          repository: hyprland-community/theme-repo
           submodules: true
 
       - name: Pull & update submodules recursively
