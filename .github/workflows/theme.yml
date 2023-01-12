@@ -16,7 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
           submodules: true
       - name: add submodule
         run: |
