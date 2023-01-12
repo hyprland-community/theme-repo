@@ -35,36 +35,8 @@ jobs:
             theme request approved, submmodule added
           labels: |
             approved
-            theme
-  send_pr:
-    if: github.event.label.name == 'approved'
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-      - name: pull_repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ..
-          ls -a
-          repo="$(tail -n +3 <<< $"${{ github.event.issue.body }}")"
-          name="$(echo $repo | grep -o '[^/]*$')"
-          gh repo fork $repo --clone
-          cd "${name/.git/}"
-          mkdir .github/workflows/
-          cp ../theme-repo/util/updater_submodule.yml .github/workflows/
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions - add updater submodule"
-          git add -A
-          git commit -am "add updater workflow"
-          gh pr create -R $repo --base
-          
-          
-          
-          
-
+            theme          
+            
   deny:
     if: github.event.label.name == 'denied'
     runs-on: ubuntu-latest
