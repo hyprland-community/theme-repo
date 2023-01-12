@@ -1,0 +1,3 @@
+[submodule "hyprland-aurora"]
+	path = hyprland-aurora
+	url = https://github.com/flick0/hyprland-aurora
