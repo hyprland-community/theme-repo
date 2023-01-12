@@ -44,6 +44,8 @@ jobs:
         shell: bash
     steps:
       - name: pull_repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ..
           ls -a
