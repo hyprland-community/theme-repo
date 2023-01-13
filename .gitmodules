@@ -1,3 +1,6 @@
 [submodule "hyprland-aurora"]
 	path = hyprland-aurora
 	url = https://github.com/flick0/hyprland-aurora
+[submodule "enight"]
+	path = enight
+	url = https://github.com/end-4/enight
