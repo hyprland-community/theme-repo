@@ -7,3 +7,6 @@
 [submodule "garden-hyprland-theme"]
 	path = garden-hyprland-theme
 	url = https://github.com/taylor85345/garden-hyprland-theme
+[submodule "cyber-hyprland-theme"]
+	path = cyber-hyprland-theme
+	url = https://github.com/taylor85345/cyber-hyprland-theme
