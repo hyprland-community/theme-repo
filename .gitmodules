@@ -4,3 +4,6 @@
 [submodule "enight"]
 	path = enight
 	url = https://github.com/end-4/enight
+[submodule "garden-hyprland-theme"]
+	path = garden-hyprland-theme
+	url = https://github.com/taylor85345/garden-hyprland-theme
