@@ -10,3 +10,6 @@
 [submodule "cyber-hyprland-theme"]
 	path = cyber-hyprland-theme
 	url = https://github.com/taylor85345/cyber-hyprland-theme
+[submodule "neon-hyprland-theme"]
+	path = neon-hyprland-theme
+	url = https://github.com/taylor85345/neon-hyprland-theme
