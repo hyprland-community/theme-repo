@@ -9,7 +9,7 @@ Check out the site: [theme browser](https://hyprland-community.github.io/themes.
 
 check out the tool [hyprland-community/hyprtheme](https://github.com/hyprland-community/hyprtheme)
 ```bash
-hyprtheme install <theme-name>
+hyprtheme repo install <theme-name>
 ```
 
 # help, how do i make and submit a theme?
