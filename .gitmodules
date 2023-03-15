@@ -13,3 +13,6 @@
 [submodule "neon-hyprland-theme"]
 	path = neon-hyprland-theme
 	url = https://github.com/taylor85345/neon-hyprland-theme
+[submodule "hyprland-print"]
+	path = hyprland-print
+	url = https://github.com/flick0/hyprland-print
