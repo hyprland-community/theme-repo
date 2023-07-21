@@ -15,12 +15,17 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Parse issue
+        id: parse
+        uses: onmax/issue-form-parser@v1.4
+        with:
+          issue_number: ${{ github.event.issue.number }}
       - uses: actions/checkout@v2
         with: 
           submodules: true
       - name: add submodule
         run: |
-          git submodule add "$(tail -n +3 <<< $"${{ github.event.issue.body }}")"
+          git submodule add '${{ fromJson(steps.parse.outputs.payload)["Repo"] }}' -b '${{ fromJson(steps.parse.outputs.payload)["Branch"] }}'
       - name: commit
         run: |
           git config user.email "actions@github.com"
