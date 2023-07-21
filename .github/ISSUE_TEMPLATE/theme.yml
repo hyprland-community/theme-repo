@@ -26,8 +26,8 @@ body:
   - type: input
     id: config
     attributes:
-      label: path to the config file of your theme
-      placeholder: default: ./theme.conf
+      label: path to the config file of your theme (default ./theme.conf)
+      placeholder: theme.conf
     validations:
       required: false
   
