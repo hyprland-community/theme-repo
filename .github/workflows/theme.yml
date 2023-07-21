@@ -23,16 +23,19 @@ jobs:
       - uses: actions/checkout@v2
         with: 
           submodules: true
+      - name: Update themes.json
+        run: |
+         ls
+         echo "`jq '.themes+=[{"name":"${{ fromJson(steps.parse.outputs.payload).Name }}","repo":"${{ fromJson(steps.parse.outputs.payload).Repo }}","branch":"${{ fromJson(steps.parse.outputs.payload).Branch }}","config":"${{ fromJson(steps.parse.outputs.payload).Config }}","desc":"${{ fromJson(steps.parse.outputs.payload).Description }}"}]' themes.json`" > themes.json
       - name: add submodule
         run: |
-          echo '${{ fromJson(steps.parse.outputs.payload).Branch }}'
           git submodule add -b '${{ fromJson(steps.parse.outputs.payload).Branch }}' -- '${{ fromJson(steps.parse.outputs.payload).Repo }}' 
       - name: commit
         run: |
           git config user.email "actions@github.com"
-          git config user.name "GitHub Actions - update submodules"
+          git config user.name "GitHub Actions - add theme"
           git add --all
-          git commit -m "Update submodules" || echo "No changes to commit"
+          git commit -m "Add theme" || echo "No changes to commit"
           git push
       - name: Close Issue
         uses: peter-evans/close-issue@v2
