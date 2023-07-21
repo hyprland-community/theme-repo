@@ -12,22 +12,22 @@ body:
   - type: input
     id: repo
     attributes:
-      label: git repository which includes your theme
-      placeholder: repo url
+      label: repo
+      placeholder: git repository which includes your theme
     validations:
       required: true
   - type: input
     id: branch
     attributes:
-      label: branch to be used on the above git repo (leave empty to use the default branch)
-      placeholder: branch name
+      label: branch
+      placeholder: branch to be used on the above git repo (leave empty to use the default branch)
     validations:
       required: false
   - type: input
     id: config
     attributes:
-      label: path to the config file of your theme (default ./theme.conf)
-      placeholder: theme.conf
+      label: config path
+      placeholder: path to the config file of your theme (default ./theme.conf)
     validations:
       required: false
   - type: textarea
