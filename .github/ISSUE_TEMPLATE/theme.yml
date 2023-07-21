@@ -24,18 +24,19 @@ body:
     validations:
       required: false
   - type: input
-    id: desc
-    attributes:
-      label: description
-      placeholder: write a description for your theme
-    validations:
-      required: false
-  - type: input
     id: config
     attributes:
       label: path to the config file of your theme (default ./theme.conf)
       placeholder: theme.conf
     validations:
       required: false
+  - type: textarea
+    id: desc
+    attributes:
+      label: description
+      placeholder: write a description for your theme
+    validations:
+      required: false
+  
   
     
