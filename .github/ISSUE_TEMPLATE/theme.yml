@@ -17,6 +17,13 @@ body:
     validations:
       required: true
   - type: input
+    id: branch
+    attributes:
+      label: branch to be used on the above git repo (leave empty to use the default branch)
+      placeholder: branch name
+    validations:
+      required: false
+  - type: input
     id: desc
     attributes:
       label: description
