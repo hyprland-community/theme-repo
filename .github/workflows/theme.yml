@@ -26,7 +26,7 @@ jobs:
       - name: add submodule
         run: |
           echo '${{ fromJson(steps.parse.outputs.payload).Branch }}'
-          git submodule add '${{ fromJson(steps.parse.outputs.payload).Repo }}' -b '${{ fromJson(steps.parse.outputs.payload).Branch }}'
+          git submodule add -b '${{ fromJson(steps.parse.outputs.payload).Branch }}' -- '${{ fromJson(steps.parse.outputs.payload).Repo }}' 
       - name: commit
         run: |
           git config user.email "actions@github.com"
