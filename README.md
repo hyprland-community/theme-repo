@@ -26,5 +26,5 @@ hyprtheme repo install <theme-name>
 
 ### images:
 
-![cyber](https://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/music.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/speaker.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/mic.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/profile.png)
+![cyber](https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png)
  <hr>
