@@ -59,9 +59,10 @@ def find_image_files(path):
             images.append(os.path.join(path,file))
     return images
 
-def find_image_readme(content:str):
+def find_image_readme(rdme):
     urls = []
-    imgs = re.findall("(https:\/\/.*\.(png|jpg|gif))",content)
+    print(rdme)
+    imgs = re.findall("(https:\/\/.*\.(png|jpg|gif))",rdme)
     print("====")
     print(imgs)
     for url in imgs:
