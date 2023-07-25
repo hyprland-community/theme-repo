@@ -26,7 +26,27 @@ hyprtheme repo install <theme-name>
 > currently wip
 
 <hr>
+
 """
+
+def gen_readme(name,repo,img_files,img_urls):
+    r = f"""
+# {name}
+### {repo}
+
+### images:
+
+"""
+    if img_urls:
+        for img in img_urls:
+            r += f"![{name}]({img})"
+    elif img_files:
+        for img in img_files:
+            r += f"{repo}/blob/{repo}/{img}?raw=true"
+    
+    return r
+
+
 
 def find_image_files(path):
     images = []
@@ -36,16 +56,16 @@ def find_image_files(path):
         if os.path.isdir(os.path.join(path,file)):
             images.extend(find_image_files(os.path.join(path,file)))
         if str(file).endswith(".jpg") or str(file).endswith(".png"):
-            images.append(os.path.join("path",file))
+            images.append(os.path.join(path,file))
     return images
 
 def find_image_readme(content:str):
     urls = []
-    for line in content.split("\n"):
-        imgs = re.findall("https:\/\/.*\.(png|jpg|gif)",line)
-        print("====")
-        print(imgs)
-        urls.extend(imgs)
+    imgs = re.findall("(https:\/\/.*\.(png|jpg|gif))",content)
+    print("====")
+    print(imgs)
+    for url in imgs:
+        if len(url) > 1: urls.append(url[0])
     return urls
 
 for theme in themes:
@@ -64,5 +84,14 @@ for theme in themes:
     print(image_files)
     print("urls ::")
     print(urls)
+
+    txt = gen_readme(theme["name"],theme["repo"],image_files,urls)
+
+    readme += f"\n{txt}\n <hr>\n"
+
+with open("./README.md","w") as f:
+    f.write(readme)
+
+
 
 
