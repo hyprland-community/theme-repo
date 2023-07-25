@@ -27,16 +27,16 @@ body:
     id: branch
     attributes:
       label: Branch
-      placeholder: branch to be used on the above git repo (leave empty to use the default branch)
+      placeholder: branch to be used on the above git repo
     validations:
-      required: false
+      required: true
   - type: input
     id: config
     attributes:
       label: Config
-      placeholder: path to the config file of your theme (default ./theme.conf)
+      placeholder: path to the config file of your theme (like ./theme.conf)
     validations:
-      required: false
+      required: true
   - type: textarea
     id: desc
     attributes:
