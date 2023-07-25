@@ -1,1 +1,5 @@
 
+[submodule "cyber-hyprland-theme"]
+	path = cyber-hyprland-theme
+	url = https://github.com/taylor85345/cyber-hyprland-theme
+	branch = master
