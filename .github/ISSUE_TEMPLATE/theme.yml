@@ -10,6 +10,13 @@ body:
       value: |
         Thanks for taking the time to write this theme request!
   - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: name of your theme
+    validations:
+      required: true
+  - type: input
     id: repo
     attributes:
       label: Repo

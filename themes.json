@@ -1,0 +1,11 @@
+{
+  "themes": [
+    {
+      "name": "print",
+      "repo": "https://github.com/flick0/hyprland-print",
+      "branch": "test",
+      "config": "theme.conf",
+      "desc": "hh"
+    }
+  ]
+}
