@@ -72,10 +72,10 @@ for theme in themes:
     path = theme["repo"].split("/")[-1]
     image_files = find_image_files(path)
     content = ""
-    if os.path.isfile("./readme.md"):
+    if os.path.isfile(os.path.join(path,"readme.md")):
         with open("./readme.md") as f:
             content = f.read()
-    elif os.path.isfile("./README.md"):
+    elif os.path.isfile(os.path.join(path,"./README.md")):
         with open("./README.md") as f:
             content = f.read()
     urls = find_image_readme(content)
