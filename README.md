@@ -26,5 +26,5 @@ hyprtheme repo install <theme-name>
 
 ### images:
 
-https://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/music.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/speaker.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/mic.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/profile.png?raw=true
+![cyber](https://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/music.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/speaker.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/mic.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/profile.png)
  <hr>
