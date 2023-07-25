@@ -1,3 +1,4 @@
+
 # theme-repo
 
 to add your theme to this repo, open an issue with the `Add Theme` form template
@@ -17,3 +18,13 @@ hyprtheme repo install <theme-name>
 > currently wip
 
 <hr>
+
+
+
+# cyber
+### https://github.com/taylor85345/cyber-hyprland-theme
+
+### images:
+
+https://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/music.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/speaker.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/mic.png?raw=truehttps://github.com/taylor85345/cyber-hyprland-theme/blob/https://github.com/taylor85345/cyber-hyprland-theme/cyber-hyprland-theme/eww/images/profile.png?raw=true
+ <hr>
