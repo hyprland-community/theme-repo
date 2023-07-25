@@ -29,7 +29,7 @@ hyprtheme repo install <theme-name>
 
 """
 
-def gen_readme(name,repo,img_files,img_urls):
+def gen_readme(name,repo,branch,img_files,img_urls):
     r = f"""
 # {name}
 ### {repo}
@@ -42,7 +42,7 @@ def gen_readme(name,repo,img_files,img_urls):
             r += f"![{name}]({img})"
     elif img_files:
         for img in img_files:
-            r += f"{repo}/blob/{repo}/{img}?raw=true"
+            r += f"{repo}/blob/{branch}/{img}?raw=true"
     
     return r
 
@@ -85,7 +85,7 @@ for theme in themes:
     print("urls ::")
     print(urls)
 
-    txt = gen_readme(theme["name"],theme["repo"],image_files,urls)
+    txt = gen_readme(theme["name"],theme["repo"],theme["branch"],image_files,urls)
 
     readme += f"\n{txt}\n <hr>\n"
 
