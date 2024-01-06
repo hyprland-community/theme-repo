@@ -39,10 +39,10 @@ def gen_readme(name,repo,branch,img_files,img_urls):
 """
     if img_urls:
         for img in img_urls:
-            r += f"![{name}]({img})"
+            r += f"![{name}]({img})\n"
     elif img_files:
         for img in img_files:
-            r += f"{repo}/blob/{branch}/{img}?raw=true"
+            r += f"{repo}/blob/{branch}/{img}?raw=true\n"
     
     return r
 
