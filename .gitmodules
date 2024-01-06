@@ -2,3 +2,7 @@
 	path = cyber-hyprland-theme
 	url = https://github.com/taylor85345/cyber-hyprland-theme
 	branch = master
+[submodule "dotfiles"]
+	path = dotfiles
+	url = https://github.com/flick0/dotfiles
+	branch = hyprland-yorha
