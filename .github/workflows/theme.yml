@@ -33,7 +33,7 @@ jobs:
          echo "`jq '.themes+=[{"name":"${{ fromJson(steps.parse.outputs.payload).Name }}","repo":"${{ fromJson(steps.parse.outputs.payload).Repo }}","branch":"${{ fromJson(steps.parse.outputs.payload).Branch }}","config":"${{ fromJson(steps.parse.outputs.payload).Config }}","desc":"${{ fromJson(steps.parse.outputs.payload).Description }}"}]' themes.json`" > themes.json
       - name: add submodule
         run: |
-          git submodule add -b '${{ fromJson(steps.parse.outputs.payload).Branch }}' -- './themes/${{ fromJson(steps.parse.outputs.payload).Repo }}' 
+          git submodule add -b '${{ fromJson(steps.parse.outputs.payload).Branch }}' -- '${{ fromJson(steps.parse.outputs.payload).Repo }}'  'themes/${{ fromJson(steps.parse.outputs.payload).Name }}'
       - name: add to list
         run: |
           python update_readme.py
