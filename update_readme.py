@@ -54,7 +54,7 @@ def find_image_readme(rdme):
     return urls
 
 for theme in themes:
-    path = f'themes/{theme["repo"].split("/")[-1]}'
+    path = f'themes/{theme["name"].split("/")[-1]}'
     image_files = find_image_files(path)
     content = ""
     if os.path.isfile(os.path.join(path,"readme.md")):
