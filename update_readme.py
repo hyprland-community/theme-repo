@@ -1,7 +1,9 @@
 import os
 import os.path
 import json
+import requests
 import re
+import PIL
 
 with open("./themes.json") as f:
     themes = json.load(f)["themes"]
@@ -53,6 +55,32 @@ def find_image_readme(rdme):
         if len(url) > 1: urls.append(url[0])
     return urls
 
+def find_img_tags(rdme):
+    urls = []
+    imgs = re.findall("<img.*src=\"(.*?)\"",rdme)
+    for url in imgs:
+        if len(url) > 1: urls.append(url[0])
+    return urls
+
+def find_urls(rdme):
+    md = find_image_readme(rdme)
+    html = find_img_tags(rdme)
+
+    # fetch image and sort on size
+    images = {}
+    for url in [*md,*html]:
+        im = requests.get(url)
+        if im.status_code == 200:
+            im = PIL.Image.open(im.raw)
+            images[url] = im.size
+        else:
+            print("error fetching image")
+    
+    # sort images
+    images = sorted(images.items(), key=lambda x: x[1][0] + x[1][1], reverse=True)
+    return [x[0] for x in images]
+
+
 for theme in themes:
     path = f'themes/{theme["name"].split("/")[-1]}'
     image_files = find_image_files(path)
@@ -63,7 +91,7 @@ for theme in themes:
     elif os.path.isfile(os.path.join(path,"./README.md")):
         with open(os.path.join(path,"README.md")) as f:
             content = f.read()
-    urls = find_image_readme(content)
+    urls = find_urls(content)
 
     print("files :: ")
     print(image_files)
