@@ -6,28 +6,8 @@ import re
 with open("./themes.json") as f:
     themes = json.load(f)["themes"]
 
-readme = """
-# theme-repo
-
-to add your theme to this repo, open an issue with the `Add Theme` form template
-
-# How do I more easily browse themes?
-Check out the site: [theme browser](https://hyprland-community.github.io/themes.html) (site still WIP)
-
-# how do i install these themes?
-
-check out the tool [hyprland-community/hyprtheme](https://github.com/hyprland-community/hyprtheme)
-```bash
-hyprtheme repo install <theme-name>
-```
-
-# help, how do i make and submit a theme?
-✨ [wiki](https://github.com/hyprland-community/theme-repo/wiki) ✨ 
-> currently wip
-
-<hr>
-
-"""
+with open("./README_TEMPLATE.md") as f:
+    readme = f.read()
 
 def gen_readme(name,repo,branch,img_files,img_urls):
     r = f"""
@@ -38,9 +18,13 @@ def gen_readme(name,repo,branch,img_files,img_urls):
 
 """
     if img_urls:
+        if len(img_urls) >= 2:
+            img_urls = img_urls[:2]
         for img in img_urls:
             r += f"![{name}]({img})\n"
     elif img_files:
+        if len(img_files) >= 2:
+            img_files = img_files[:2]
         for img in img_files:
             r += f"{repo}/blob/{branch}/{img}?raw=true\n"
     
@@ -70,7 +54,7 @@ def find_image_readme(rdme):
     return urls
 
 for theme in themes:
-    path = theme["repo"].split("/")[-1]
+    path = f'themes/{theme["repo"].split("/")[-1]}'
     image_files = find_image_files(path)
     content = ""
     if os.path.isfile(os.path.join(path,"readme.md")):
