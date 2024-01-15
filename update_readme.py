@@ -24,12 +24,12 @@ def gen_readme(name,repo,branch,img_files,img_urls):
         if len(img_urls) >= 2:
             img_urls = img_urls[:2]
         for img in img_urls:
-            r += f"![{name}]({img})\n"
+            r += f"\n![{name}]({img})\n"
     elif img_files:
         if len(img_files) >= 2:
             img_files = img_files[:2]
         for img in img_files:
-            r += f"{repo}/blob/{branch}/{img}?raw=true\n"
+            r += f"\n{repo}/blob/{branch}/{img}?raw=true\n"
     
     return r
 
@@ -60,7 +60,7 @@ def find_img_tags(rdme):
     urls = []
     imgs = re.findall("<img.*src=\"(.*?)\"",rdme)
     for url in imgs:
-        if len(url) > 1: urls.append(url[0])
+        if url.startswith("http"): urls.append(url)
     return urls
 
 def find_urls(rdme):
@@ -69,10 +69,18 @@ def find_urls(rdme):
 
     # fetch image and sort on size
     images = {}
-    for url in [*md,*html]:
+    for i,url in enumerate([*md,*html]):
         im = requests.get(url)
         if im.status_code == 200:
-            im = Image.open(im.raw)
+            #check if image is valid
+            #save img to /tmp
+            with open(f"/tmp/{i}","wb") as f:
+                f.write(im.content)
+            try:
+                im = Image.open(f"/tmp/{i}")
+            except:
+                print("error opening image")
+                continue
             images[url] = sum(im.size)
         else:
             print("error fetching image")
@@ -106,7 +114,6 @@ for theme in themes:
 
 with open("./README.md","w") as f:
     f.write(readme)
-
 
 
 
