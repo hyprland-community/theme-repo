@@ -1,4 +1,3 @@
-
 # theme-repo
 
 to add your theme to this repo, open an issue with the `Add Theme` form template
@@ -20,20 +19,11 @@ hyprtheme repo install <theme-name>
 <hr>
 
 
-
 # cyber
 ### https://github.com/taylor85345/cyber-hyprland-theme
 
 ### images:
 
 ![cyber](https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png)
- <hr>
 
-
-# YoRHa
-### https://github.com/flick0/dotfiles
-
-### images:
-
-https://github.com/flick0/dotfiles/blob/hyprland-yorha/dotfiles/components/ags/assets/light/yorha.png?raw=truehttps://github.com/flick0/dotfiles/blob/hyprland-yorha/dotfiles/components/ags/assets/light/glory-ghost.png?raw=truehttps://github.com/flick0/dotfiles/blob/hyprland-yorha/dotfiles/components/ags/assets/dark/yorha.png?raw=truehttps://github.com/flick0/dotfiles/blob/hyprland-yorha/dotfiles/components/ags/assets/dark/glory-ghost.png?raw=truehttps://github.com/flick0/dotfiles/blob/hyprland-yorha/dotfiles/components/ags/nier/glory.png?raw=true
  <hr>

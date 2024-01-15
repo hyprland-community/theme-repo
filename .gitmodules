@@ -1,0 +1,4 @@
+[submodule "themes/cyber"]
+	path = themes/cyber
+	url = https://github.com/taylor85345/cyber-hyprland-theme
+	branch = master
