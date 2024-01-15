@@ -1,8 +1,0 @@
-[submodule "themes/cyber"]
-	path = themes/cyber
-	url = https://github.com/taylor85345/cyber-hyprland-theme
-	branch = master
-[submodule "themes/YoRHa"]
-	path = themes/YoRHa
-	url = https://github.com/flick0/dotfiles
-	branch = hyprland-yorha
