@@ -3,7 +3,8 @@ import os.path
 import json
 import requests
 import re
-import PIL
+
+from PIL import Image
 
 with open("./themes.json") as f:
     themes = json.load(f)["themes"]
@@ -71,13 +72,14 @@ def find_urls(rdme):
     for url in [*md,*html]:
         im = requests.get(url)
         if im.status_code == 200:
-            im = PIL.Image.open(im.raw)
-            images[url] = im.size
+            im = Image.open(im.raw)
+            images[url] = sum(im.size)
         else:
             print("error fetching image")
     
     # sort images
-    images = sorted(images.items(), key=lambda x: x[1][0] + x[1][1], reverse=True)
+    images = sorted(images.items(), key=lambda x: x[1], reverse=True)
+    print(images)
     return [x[0] for x in images]
 
 
