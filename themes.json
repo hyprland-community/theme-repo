@@ -1,4 +1,18 @@
 {
   "themes": [
+    {
+      "name": "cyber",
+      "repo": "https://github.com/taylor85345/cyber-hyprland-theme",
+      "branch": "master",
+      "config": "theme.conf",
+      "desc": "cyber"
+    },
+    {
+      "name": "YoRHa",
+      "repo": "https://github.com/flick0/dotfiles",
+      "branch": "hyprland-yorha",
+      "config": "./theme.conf",
+      "desc": "a rice inspired by NieR:Automata ui"
+    }
   ]
 }
