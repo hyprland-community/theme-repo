@@ -36,6 +36,7 @@ jobs:
           git submodule add -b '${{ fromJson(steps.parse.outputs.payload).Branch }}' -- '${{ fromJson(steps.parse.outputs.payload).Repo }}'  'themes/${{ fromJson(steps.parse.outputs.payload).Name }}'
       - name: add to list
         run: |
+          python -m pip install requests
           python update_readme.py
       - name: commit
         run: |
