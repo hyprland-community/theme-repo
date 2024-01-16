@@ -21,16 +21,9 @@ def gen_readme(name,repo,branch,img_files,img_urls):
 
 """
     if img_urls:
-        if len(img_urls) >= 2:
-            img_urls = img_urls[:2]
-        for img in img_urls:
-            r += f"\n![{name}]({img})\n"
+        r += f"\n![{name}]({img_urls[0]})\n"
     elif img_files:
-        if len(img_files) >= 2:
-            img_files = img_files[:2]
-        for img in img_files:
-            r += f"\n{repo}/blob/{branch}/{img}?raw=true\n"
-    
+        r += f"\n{repo}/blob/{branch}/{img_files[0]}?raw=true\n"
     return r
 
 
@@ -90,6 +83,8 @@ def find_urls(rdme):
     print(images)
     return [x[0] for x in images]
 
+with open("./themes.json","r") as f:
+    themes_json = json.load(f)
 
 for theme in themes:
     path = f'themes/{theme["name"].split("/")[-1]}'
@@ -109,11 +104,18 @@ for theme in themes:
     print(urls)
 
     txt = gen_readme(theme["name"],theme["repo"],theme["branch"],image_files,urls)
+    
+    for t in themes_json["themes"]:
+        if t["name"] == theme["name"]:
+            t["images"] = urls
 
     readme += f"\n{txt}\n <hr>\n"
 
 with open("./README.md","w") as f:
     f.write(readme)
+
+with open("./themes.json","w") as f:
+    json.dump(themes_json,f,indent=4)
 
 
 
