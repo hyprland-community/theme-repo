@@ -1,11 +1,24 @@
 {
-  "themes": [
-    {
-      "name": "YoRHa",
-      "repo": "https://github.com/flick0/dotfiles",
-      "branch": "hyprland-yorha",
-      "config": "./theme.conf",
-      "desc": "a rice inspired by NieR:Automata ui"
-    }
-  ]
+    "themes": [
+        {
+            "name": "YoRHa",
+            "repo": "https://github.com/flick0/dotfiles",
+            "branch": "hyprland-yorha",
+            "config": "./theme.conf",
+            "desc": "a rice inspired by NieR:Automata ui",
+            "images": [
+                "https://github.com/flick0/dotfiles/assets/77581181/4b94622c-69f4-4f2d-82c4-7032d6e66ca4"
+            ]
+        },
+        {
+            "name": "cyber",
+            "repo": "https://github.com/taylor85345/cyber-hyprland-theme",
+            "branch": "master",
+            "config": "theme.conf",
+            "desc": "cyber",
+            "images": [
+                "https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png"
+            ]
+        }
+    ]
 }

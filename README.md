@@ -19,17 +19,6 @@ hyprtheme repo install <theme-name>
 <hr>
 
 
-# cyber
-### https://github.com/taylor85345/cyber-hyprland-theme
-
-### images:
-
-
-![cyber](https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png)
-
- <hr>
-
-
 # YoRHa
 ### https://github.com/flick0/dotfiles
 
@@ -37,5 +26,16 @@ hyprtheme repo install <theme-name>
 
 
 ![YoRHa](https://github.com/flick0/dotfiles/assets/77581181/4b94622c-69f4-4f2d-82c4-7032d6e66ca4)
+
+ <hr>
+
+
+# cyber
+### https://github.com/taylor85345/cyber-hyprland-theme
+
+### images:
+
+
+![cyber](https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png)
 
  <hr>
