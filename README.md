@@ -3,7 +3,7 @@
 to add your theme to this repo, open an issue with the `Add Theme` form template
 
 # How do I more easily browse themes?
-Check out the site: [theme browser](https://hyprland-community.github.io/themes.html) (site still WIP)
+Check out the site: [theme browser](https://community.hyprland.org/hyprtheme/) (site still WIP)
 
 # how do i install these themes?
 
