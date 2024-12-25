@@ -2,7 +2,7 @@
     "themes": [
         {
             "name": "YoRHa",
-            "repo": "https://github.com/flick0/dotfiles",
+            "repo": "https://github.com/flickowoa/dotfiles",
             "branch": "hyprland-yorha",
             "config": "./theme.conf",
             "desc": "a rice inspired by NieR:Automata ui",
