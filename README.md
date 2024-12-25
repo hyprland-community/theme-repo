@@ -46,7 +46,6 @@ hyprtheme repo install <theme-name>
 
 ### images:
 
-
-https://github.com/flickowoa/dotfiles/blob/hyprland-zephyr/themes/zephyr/quickshell/assets/yu.png?raw=true
+![zephyr](https://github.com/user-attachments/assets/fe01c0b1-35bf-485c-ab6d-5368b4c0d057)
 
  <hr>
