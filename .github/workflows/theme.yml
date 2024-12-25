@@ -41,6 +41,7 @@ jobs:
           python update_readme.py
       - name: commit
         run: |
+          git pull
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions - add theme"
           git add --all
