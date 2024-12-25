@@ -19,6 +19,14 @@
             "images": [
                 "https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png"
             ]
+        },
+        {
+            "name": "zephyr",
+            "repo": "https://github.com/flickowoa/dotfiles",
+            "branch": "hyprland-zephyr",
+            "config": "theme.conf",
+            "desc": "lines!",
+            "images": []
         }
     ]
 }

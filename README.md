@@ -3,7 +3,7 @@
 to add your theme to this repo, open an issue with the `Add Theme` form template
 
 # How do I more easily browse themes?
-Check out the site: [theme browser](https://community.hyprland.org/hyprtheme/) (site still WIP)
+Check out the site: [theme browser](https://hyprland-community.github.io/themes.html) (site still WIP)
 
 # how do i install these themes?
 
@@ -20,7 +20,7 @@ hyprtheme repo install <theme-name>
 
 
 # YoRHa
-### https://github.com/flick0/dotfiles
+### https://github.com/flickowoa/dotfiles
 
 ### images:
 
@@ -37,5 +37,16 @@ hyprtheme repo install <theme-name>
 
 
 ![cyber](https://user-images.githubusercontent.com/36456160/205144772-bc832650-15e6-4304-9c65-fe7ce7f73e83.png)
+
+ <hr>
+
+
+# zephyr
+### https://github.com/flickowoa/dotfiles
+
+### images:
+
+
+https://github.com/flickowoa/dotfiles/blob/hyprland-zephyr/themes/zephyr/quickshell/assets/yu.png?raw=true
 
  <hr>
